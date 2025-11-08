@@ -25,7 +25,7 @@ export default function App() {
     try {
       const data = await api.fetchCart();
       setCart(data);
-    } catch (err) { console.error(err); /* ignore empty cart */ }
+    } catch (err) { console.error(err); }
   }
 
   const handleAdd = async (productId) => {
@@ -36,20 +36,11 @@ export default function App() {
     } catch (err) { console.error(err); toast.error('Add to cart failed'); }
   };
 
-  // const handleRemove = async (id) => {
-  //   try {
-  //     const data = await api.removeCartItem(id);
-  //     setCart(data);
-  //     toast.info('Removed item');
-  //   } catch (err) { console.error(err); toast.error('Remove failed'); }
-  // };
-
 
   const handleRemove = async (id) => {
   try {
     const data = await api.removeCartItem(id);
 
-    // If items array is empty, show "Cart empty"
     setCart({
       items: data.items || [],
       total: data.total || 0

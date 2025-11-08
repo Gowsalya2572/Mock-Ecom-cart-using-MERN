@@ -3,13 +3,13 @@ import React from 'react';
 export default function Cart({ open, onClose, cart = { items: [], total: 0 }, onRemove, onUpdateQty, onProceed }) {
   return (
     <div className={`fixed inset-0 z-50 ${open ? '' : 'hidden'}`}>
-      {/* Background overlay */}
+      
       <div
         className={`absolute inset-0 bg-black/50 transition-opacity ${open ? 'opacity-100' : 'opacity-0'}`}
         onClick={onClose}
       />
       
-      {/* Drawer */}
+      
       <div className={`absolute right-0 top-0 h-full w-96 bg-base-100 shadow-xl transform transition-transform duration-300 ${open ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="p-4 h-full flex flex-col">
           <div className="flex justify-between items-center mb-4">
@@ -41,7 +41,7 @@ export default function Cart({ open, onClose, cart = { items: [], total: 0 }, on
 )}
 
 
-          {/* Footer */}
+          
           <div className="mt-4 border-t pt-3">
             <div className="flex justify-between items-center">
               <span className="font-semibold text-white">Total</span>

@@ -51,20 +51,6 @@ router.post('/', async (req, res) => {
   }
 });
 
-// DELETE /api/cart/:id -> remove cart item
-// router.delete('/:id', async (req, res) => {
-//   try {
-//     const id = req.params.id;
-//     await CartItem.deleteOne({ _id: id, userId: MOCK_USER });
-//     const items = await CartItem.find({ userId: MOCK_USER });
-//     const total = items.reduce((sum, it) => sum + it.price * it.qty, 0);
-//     res.json({items, total, message: "item removed successfully" });
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).json({ message: 'Server error removing cart item' });
-//   }
-// });
-
 
 router.delete('/:id', async (req, res) => {
   try {

@@ -4,7 +4,7 @@ export default function Checkout({ open, onClose, onCheckout, receipt }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
-  // reset fields when modal opens/closes
+  
   useEffect(() => {
     if (!open) {
       setName('');

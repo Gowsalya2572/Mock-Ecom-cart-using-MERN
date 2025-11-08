@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
       timestamp: new Date().toISOString()
     };
 
-    // Clear cart after checkout (mock behavior)
+    // Clear cart 
     await CartItem.deleteMany({ userId: MOCK_USER });
 
     res.json({ receipt });
