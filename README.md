@@ -71,7 +71,7 @@ The frontend runs at http://localhost:5173
 | GET    | `/api/products`        | Get all products          |
 | GET    | `/api/cart/`           | Get cart details          |
 | POST   | `/api/cart/`           | Add product to cart       |
-| PUT    | `/api/cart/:id`        | Update cart item quantity |
+| PATCH  | `/api/cart/:id`        | Update cart item quantity |
 | DELETE | `/api/cart/:id`        | Remove item from cart     |
 | POST   | `/api/checkout`        | Checkout and get receipt  |
 
